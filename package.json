@@ -1,0 +1,49 @@
+{
+  "name": "ai-research-impact-rankings-frontend",
+  "version": "1.0.0",
+  "description": "Interactive frontend application for AI Research Impact Rankings with faculty analysis and research field visualization",
+  "main": "public/index.html",
+  "scripts": {
+    "start": "npx serve public -p 8000",
+    "dev": "npx live-server public --port=8000 --open=/",
+    "build": "echo 'Static site - no build process required'",
+    "deploy": "echo 'Deploy to static hosting service'",
+    "serve": "python -m http.server 8000"
+  },
+  "keywords": [
+    "ai",
+    "research",
+    "rankings",
+    "computer-science",
+    "universities",
+    "faculty",
+    "research-impact",
+    "data-visualization",
+    "academic-rankings",
+    "frontend",
+    "interactive"
+  ],
+  "author": "Impact Rankings Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lianghui818/revolutionizing-higher-ed-rankings.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Lianghui818/revolutionizing-higher-ed-rankings/issues"
+  },
+  "homepage": "https://impactrank.org",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "serve": "^14.2.1"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "python": ">=3.6.0"
+  },
+  "files": [
+    "public/",
+    "docs/",
+    "README.md"
+  ]
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Research Impact Rankings - Metrics-based ranking of computer science institutions">
+    <meta name="keywords" content="AI, research, rankings, computer science, universities, impact, faculty">
+    <meta name="author" content="Impact Rankings Team">
+    
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/7.2.3/css/flag-icons.min.css">
+    
+    <!-- Main Application Script -->
+    <script src="app.js" charset="utf-8" defer></script>
+    
+    <title>AI Research Impact Rankings | ImpactRank.org</title>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="header-main">
+                <h1><i class="fas fa-chart-line"></i> AI Research Impact Rankings</h1>
+                <p class="header-subtitle">Metrics-based ranking of computer science institutions</p>
+            </div>
+            <div class="header-actions">
+                <a href="https://github.com/Lianghui818/revolutionizing-higher-ed-rankings" class="github-link" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+        </div>
+        <div class="header-description">
+            <p>Rankings are measured through the impact that each school's publications have made to the field of computer science. Each impactful publication gets assigned one point, divided among universities according to author affiliations.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="content">
+            <div class="filter-sidebar">
+                <div class="filter-section">
+                    <h3><i class="fas fa-globe"></i> Geographic Filters</h3>
+                    
+                    <div class="filter-group">
+                        <label for="regionFilter" class="filter-label">
+                            <i class="fas fa-map"></i> Region
+                        </label>
+                        <select id="regionFilter" class="filter-select">
+                            <option value="all">All Regions</option>
+                            <option value="Africa">Africa</option>
+                            <option value="Asia">Asia</option>
+                            <option value="Australasia">Australasia</option>
+                            <option value="Europe">Europe</option>
+                            <option value="North America">North America</option>
+                            <option value="southamerica">South America</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="countryFilter" class="filter-label">
+                            <i class="fas fa-flag"></i> Country
+                        </label>
+                        <select id="countryFilter" class="filter-select">
+                            <option value="all">All Countries</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3><i class="fas fa-microscope"></i> Research Fields</h3>
+                    
+                    <div class="filter-group">
+                        <div class="filter-header">
+                            <label class="filter-label">
+                                <i class="fas fa-list"></i> Fields
+                            </label>
+                            <button id="toggleAllFields" class="toggle-button-small" onclick="toggleAllFields()">
+                                All
+                            </button>
+                        </div>
+                        <!-- Research field checkboxes will be dynamically generated -->
+                        <div class="field-checkboxes" id="fieldCheckboxes">
+                            <!-- Field checkboxes populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-container">
+                <div class="results-header">
+                    <div class="results-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-university"></i>
+                            <span id="totalUniversities">0</span>
+                            <label>Universities</label>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span id="totalScore">0</span>
+                            <label>Total Impact Score</label>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-filter"></i>
+                            <span id="activeFilters">0</span>
+                            <label>Active Filters</label>
+                        </div>
+                    </div>
+                    <div class="results-actions">
+                        <button class="export-btn" onclick="exportData()">
+                            Export CSV
+                        </button>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+                    <div class="loading-spinner" id="loadingSpinner">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <span>Loading rankings...</span>
+                    </div>
+                    
+                    <table id="rankingTable" class="rankings-table">
+                        <thead>
+                            <tr>
+                                <th class="rank-col">Rank</th>
+                                <th class="institution-col">Institution</th>
+                                <th class="score-col">Impact Score</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- University rankings populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="scroll-info">
+                    <span class="results-count">Showing <span id="totalCount">0</span> results</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2024 AI Research Impact Rankings. </p>
+            <div class="footer-links">
+                <a href="https://github.com/Lianghui818/revolutionizing-higher-ed-rankings" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="#" onclick="showAbout()">
+                    <i class="fas fa-info-circle"></i> About
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Application initialized by app.js -->
+</body>
+</html>
