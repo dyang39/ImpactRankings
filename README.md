@@ -68,6 +68,10 @@ ImpactRankings-Frontend/
 │       ├── 3_faculty_score.csv  # Faculty details
 │       └── country-info.csv     # Country information
 ├── docs/                  # Documentation
+│   ├── api.md            # API documentation
+│   ├── deployment.md     # Deployment guide
+│   ├── faq.md           # Frequently asked questions
+│   └── disclaimer.md    # Terms of use and disclaimer
 ├── start.ps1             # Windows startup script
 ├── package.json          # Node.js dependencies
 └── README.md             # This file
@@ -134,6 +138,16 @@ python -m http.server 8000
 - **Responsive UI**: Smooth interactions and animations
 - **Memory Management**: Efficient data handling for large datasets
 
+## 📚 Documentation
+
+- **[API Documentation](docs/api.md)**: Data format and structure details
+- **[Deployment Guide](docs/deployment.md)**: AWS S3 and CloudFront deployment
+- **[FAQ](docs/faq.md)**: Frequently asked questions and troubleshooting
+- **[Disclaimer](docs/disclaimer.md)**: Terms of use and legal information
+
+## ⚠️ Important Notice
+
+Please read the [Disclaimer](docs/disclaimer.md) before using this application. The rankings are for informational purposes only and should not be used as the sole basis for academic or institutional decisions.
 
 ---
 
